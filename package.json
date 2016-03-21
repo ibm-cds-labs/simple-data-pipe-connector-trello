@@ -1,0 +1,38 @@
+{
+  "name": "simple-data-pipe-connector-trello",
+  "version": "0.0.2",
+  "description": "Simple Data Pipe connector for Trello.",
+  "main": "./lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibm-cds-labs/simple-data-pipe-connector-trello.git"
+  },
+  "simple_data_pipe": {
+    "name": "Trello",
+    "service_dependencies": []
+  },
+  "keywords": [
+    "simple data pipe",
+    "trello",
+    "connector",
+    "Cloudant",
+    "data movement"
+  ],
+  "dependencies": {
+    "bluemix-helper-config": "^0.1.13",
+    "lodash": "^4.6.1",
+    "passport-trello": "^0.1.5",
+    "request": "^2.69.0",
+    "simple-data-pipe-sdk": "git://github.com/ibm-cds-labs/simple-data-pipe-sdk.git#pp_validation",
+    "trello": "^0.5.1",
+    "util": "^0.10.3"
+  },
+  "author": {
+    "name": "ptitzler@us.ibm.com"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-trello/issues"
+  },
+  "readmeFilename": "README.md"
+}
