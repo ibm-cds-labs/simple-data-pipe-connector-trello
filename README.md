@@ -1,9 +1,43 @@
-***
-
-
 # Simple Data Pipe connector for trello.com
 
-This connector uses [the Trello REST API](https://developers.trello.com/get-started/intro) to fetch information about lists and cards for one or more boards and the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) to the data in Cloudant. One record is created for each list and card.
+This connector uses [the Trello REST API](https://developers.trello.com/get-started/intro) to fetch information about lists and cards for one or more boards. The [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) is used to store the data in Cloudant. One JSON record is created for each list and card in the selected board(s):
+
+#####Board record structure
+```json
+{
+ "..." : "<cloudant document properties such as _id and _rev>",
+ "type": "board",
+ "data": {
+ 		  "<board_properties>" : "see https://developers.trello.com/advanced-reference/member#get-1-members-idmember-or-username-boards"	
+		 },
+ "pt_type": "<trello_board_id>"		 		 
+}
+```
+
+#####List record structure
+```json
+{
+"..." : "<cloudant document properties such as _id and _rev>",
+ "type": "list",
+ "data": {
+ 		  "<list_properties>" : "see https://developers.trello.com/advanced-reference/board#get-1-boards-board-id-lists"	
+		 },
+ "pt_type": "<trello_board_id>"		 
+}
+```
+
+#####Card record structure
+```json
+{
+"..." : "<cloudant document properties such as _id and _rev>",
+ "type": "card",
+ "data": {
+ 		  "<card_properties>" : "see https://developers.trello.com/advanced-reference/board#get-1-boards-board-id-cards"	
+		 },
+"pt_type": "<trello_board_id>"		 		 
+}
+```
+
 
 Need to load data from other sources? Check out the [connector repository](https://developer.ibm.com/clouddataservices/simple-data-pipe-connectors/).
 
@@ -27,9 +61,8 @@ This connector does not require any additional Bluemix service.
 
   When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the `package.json` file: 
 
-> BETA ONLY
 ```
-"simple-data-pipe-connector-trello": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-trello.git#pp_validation"
+"simple-data-pipe-connector-trello": "https://github.com/ibm-cds-labs/simple-data-pipe-connector-trello.git",
 ```
 
 ##### Enable OAuth support and collect connectivity information
