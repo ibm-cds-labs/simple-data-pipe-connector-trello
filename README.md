@@ -1,11 +1,9 @@
-> Hey there! So you want to build your own Simple Data Pipe connector? [Start here](https://github.com/ibm-cds-labs/simple-data-pipe-connector-template/wiki/How-to-build-a-Simple-Data-Pipe-connector-using-this-template).
-
 ***
 
 
 # Simple Data Pipe connector for trello.com
 
-This connector uses [the Trello REST API](https://developers.trello.com/get-started/intro) to fetch cards from one or more boards and the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) to store them in Cloudant. 
+This connector uses [the Trello REST API](https://developers.trello.com/get-started/intro) to fetch information about lists and cards for one or more boards and the [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) to the data in Cloudant. One record is created for each list and card.
 
 Need to load data from other sources? Check out the [connector repository](https://developer.ibm.com/clouddataservices/simple-data-pipe-connectors/).
 
