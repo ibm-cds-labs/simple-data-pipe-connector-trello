@@ -25,7 +25,7 @@ Verify the following:
 
 This connector does not require any additional Bluemix service.
 
-##### Install the Simple Data Pipe connector for Slack
+##### Install the Simple Data Pipe connector for Trello
 
   When you [follow these steps to install this connector](https://github.com/ibm-cds-labs/simple-data-pipe/wiki/Installing-a-Simple-Data-Pipe-Connector), add the following line to the dependencies list in the `package.json` file: 
 
@@ -46,7 +46,7 @@ To configure and run a pipe
 
 1. Open the Simple Data Pipe web console.
 2. Select __Create A New Pipe__.
-3. Select __Trello (fetch lists and cards)__ for the __Type__ when creating a new pipe.  
+3. Select __Trello__ for the __Type__ when creating a new pipe.  
 4. In the _Connect_ page, enter the _application id_ and _secret_ from the Trello application settings page.
 5. When prompted, authorize the Simple Data Pipe application to access your Trello boards in read-only mode. 
 6. Select a board (or All boards) from which to fetch list and card information.
