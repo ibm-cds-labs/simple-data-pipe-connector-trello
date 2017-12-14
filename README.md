@@ -1,5 +1,7 @@
 # Simple Data Pipe connector for trello.com
 
+:no_entry_sign: This project is no longer maintained.
+
 This connector uses [the Trello REST API](https://developers.trello.com/get-started/intro) to fetch information about lists and cards for one or more boards. The [Simple Data Pipe SDK](https://github.com/ibm-cds-labs/simple-data-pipe-sdk) is used to store the data in Cloudant. One JSON record is created for each list and card in the selected board(s):
 
 #####Board record structure
